@@ -174,3 +174,31 @@ console.log(friends.includes('hello'));
 console.log(friends.includes('Vipin'));
 console.log(friends.includes('23')); //false because it is testing with strict equality and it doesnt do type coercion
 console.log(friends.includes(23));
+
+//OBJECTS
+
+// in objects order of values doent matter when we retrieve
+//object literal syntax
+const jonas = {
+  firstName: 'Raghvendra',
+  lastName: 'Singh',
+  age: 2037 - 1991,
+  job: 'teacher',
+  friends: ['M', 'P', 'S'],
+};
+
+console.log(jonas);
+console.log(jonas.lastName);
+console.log(jonas['lastName']);
+
+const nameKey = 'Name';
+console.log(jonas['first' + nameKey]);
+console.log(jonas['last' + nameKey]);
+
+const interestedIn = prompt(
+  'What do you want to know about Raghvendra? Choose between firstName, lastName, age, job, and friends'
+);
+console.log(jonas[interestedIn]);
+
+jonas.location = 'Portugal';
+jonas['twitter'] = '@raghvendra';
