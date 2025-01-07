@@ -179,26 +179,26 @@ console.log(friends.includes(23));
 
 // in objects order of values doent matter when we retrieve
 //object literal syntax
-const jonas = {
-  firstName: 'Raghvendra',
-  lastName: 'Singh',
-  age: 2037 - 1991,
-  job: 'teacher',
-  friends: ['M', 'P', 'S'],
-};
+// const jonas = {
+//   firstName: 'Raghvendra',
+//   lastName: 'Singh',
+//   age: 2037 - 1991,
+//   job: 'teacher',
+//   friends: ['M', 'P', 'S'],
+// };
 
-console.log(jonas);
-console.log(jonas.lastName);
-console.log(jonas['lastName']);
+// console.log(jonas);
+// console.log(jonas.lastName);
+// console.log(jonas['lastName']);
 
-const nameKey = 'Name';
-console.log(jonas['first' + nameKey]);
-console.log(jonas['last' + nameKey]);
+// const nameKey = 'Name';
+// console.log(jonas['first' + nameKey]);
+// console.log(jonas['last' + nameKey]);
 
-const interestedIn = prompt(
-  'What do you want to know about Raghvendra? Choose between firstName, lastName, age, job, and friends'
-);
-console.log(jonas[interestedIn]);
+// const interestedIn = prompt(
+//   'What do you want to know about Raghvendra? Choose between firstName, lastName, age, job, and friends'
+// );
+// console.log(jonas[interestedIn]);
 
-jonas.location = 'Portugal';
-jonas['twitter'] = '@raghvendra';
+// jonas.location = 'Portugal';
+// jonas['twitter'] = '@raghvendra';
