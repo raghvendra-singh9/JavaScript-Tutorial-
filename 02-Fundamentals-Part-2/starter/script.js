@@ -255,6 +255,6 @@ console.log(jonas.getSummary());
 
 //LOOPS
 
-for (let rep = 1; rep <= 11; rep++) {
-  console.log(`Lifting Weights repetition ${rep}`);
-}
+// for (let rep = 1; rep <= 11; rep++) {
+//   console.log(`Lifting Weights repetition ${rep}`);
+// }
