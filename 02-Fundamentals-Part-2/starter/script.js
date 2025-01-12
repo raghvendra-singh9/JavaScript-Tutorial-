@@ -260,10 +260,10 @@ for (let rep = 1; rep <= 11; rep++) {
 }
 
 // LOOPING ARRAY
-const gaurav = [
-  'Gaurav',
-  'Singh',
-  2037 - 1991,
-  'Advocate',
-  ['Golu', 'Kushi', 'Kannu'],
-];
+// const gaurav = [
+//   'Gaurav',
+//   'Singh',
+//   2037 - 1991,
+//   'Advocate',
+//   ['Golu', 'Kushi', 'Kannu'],
+// ];
