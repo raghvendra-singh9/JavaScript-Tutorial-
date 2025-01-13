@@ -260,10 +260,79 @@ for (let rep = 1; rep <= 11; rep++) {
 }
 
 // LOOPING ARRAY
-// const gaurav = [
-//   'Gaurav',
-//   'Singh',
-//   2037 - 1991,
-//   'Advocate',
-//   ['Golu', 'Kushi', 'Kannu'],
-// ];
+const gaurav = [
+  'Gaurav',
+  'Singh',
+  2037 - 1991,
+  'Advocate',
+  ['Golu', 'Kushi', 'Kannu'],
+];
+
+// for (let i = 0; i < gaurav.length; i++) {
+//   console.log(gaurav[i], typeof jonas[i]);
+// }
+const types = [];
+
+for (let i = 0; i < gaurav.length; i++) {
+  console.log(gaurav[i], typeof gaurav[i]);
+
+  //Filling types array
+  // types[i] = typeof gaurav[i];
+
+  types.push(typeof [i]);
+}
+
+console.log(types);
+
+const yearss = [1991, 2007, 1969, 2020];
+const agess = [];
+
+for (let i = 0; i < yearss.length; i++) {
+  agess.push(2037 - yearss[i]);
+}
+console.log(agess);
+
+// CONTINUE AND BREAK STATEMENT
+
+console.log(' ----  ONLY STRING  ----');
+
+for (let i = 0; i < gaurav.length; i++) {
+  if (typeof gaurav[i] !== 'String') continue;
+  console.log(gaurav[i], typeof gaurav[i]);
+}
+
+console.log(' ----  BREAK WITH NUMBER  ----');
+
+for (let i = 0; i < gaurav.length; i++) {
+  if (typeof gaurav[i] === 'numberjob') break;
+  console.log(gaurav[i], typeof gaurav[i]);
+}
+
+// LOOPING BACKWARDS
+
+for (let i = gaurav.length - 1; i >= 0; i--) {
+  console.log(i, gaurav[i]);
+}
+
+for (let exercise = 1; exercise < 4; exercise++) {
+  console.log(`----- STARTING EXERCISE ${exercise}`);
+  for (let rep = 1; rep <= 5; rep++) {
+    console.log(`Lifting weight repetitioon ${rep}`);
+  }
+}
+
+// WHILE LOOP
+
+let rep = 1;
+while (rep <= 10) {
+  console.log(`Lifting weight repetitioon ${rep}`);
+  rep++;
+}
+
+let dice = Math.trunc(Math.random() * 6) + 1; //trunc removes the decimal part
+
+while (dice !== 6) {
+  console.log(`You rolled a ${dice}`);
+  dice = Math.trunc(Math.random() * 6) + 1;
+  if (dice === 6) console.log('Loop is about to end...');
+}
