@@ -272,7 +272,7 @@ console.log(undefined || 0 || '' || 'Hello' || 23 || null);
 // const guests2 = restaurant.numGuests || 10;
 // console.log(guests2);
 
-//  if we put 0 in placre of 23
+//  if we put 0 in place of 23
 
 //Nullish operator
 restaurant.numGuests = 0;
@@ -355,3 +355,33 @@ for (const [i, el] of myMenu.entries()) {
 }
 
 //OPTIONAL CHAINING
+//without oc
+if (restaurant.openingHours && restaurant.openingHours.mon)
+  console.log(restaurant.openingHours.mon.open);
+
+// console.log(restaurant.openingHours.mon.open);
+
+//with OC
+console.log(restaurant.openingHours.mon?.open);
+console.log(restaurant.openingHours?.tue?.open);
+
+//ExaMPLE OC
+const days = ['mon', 'tue', 'wed', 'thu', 'fri', 'sat', 'sun'];
+for (const day of days) {
+  // console.log(day);
+  const open = restaurant.openingHours[day]?.open ?? 'closed';
+  console.log(`on ${day}, we open at ${open}`);
+}
+
+// Optional chaining on methods
+console.log(restaurant.order?.(0, 1) || 'Method does not exist');
+console.log(restaurant.orderRissoto?.(0, 1) || 'Method does not exist');
+console.log(restaurant.orderRissoto?.(0, 1) ?? 'Method does not exist');
+
+// Optional chaining on arrays
+const users = [{ name: 'raghav', email: 'hello' }];
+console.log(users[0]?.name ?? 'user array empty');
+
+//without oc
+if (users.length > 0) console.log(users[0]?.name);
+else console.log('user array empty');
