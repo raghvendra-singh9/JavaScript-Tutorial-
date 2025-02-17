@@ -385,3 +385,66 @@ console.log(users[0]?.name ?? 'user array empty');
 //without oc
 if (users.length > 0) console.log(users[0]?.name);
 else console.log('user array empty');
+
+// LOOPING OBJECTS:: Object keys, values and entries
+
+//Property NAMES
+const properties = Object.keys(openingHours);
+console.log(properties);
+
+let openStr = `We are open on ${properties.length} days: `;
+
+for (const day of properties) {
+  openStr += `${day}, `;
+}
+console.log(openStr);
+
+// Property VALUES
+
+const values = Object.values(openingHours);
+console.log(values);
+
+const entries = Object.entries(openingHours);
+console.log(entries);
+
+for (const [key, { open, close }] of entries) {
+  console.log(`on ${key} we open at ${open} and close at ${close}`);
+}
+
+////  SETS
+
+const ordersSet = new Set([
+  'Pasta',
+  'Pizza',
+  'Pizza',
+  'Risotto',
+  'Pasta',
+  'Pizza',
+]);
+console.log(ordersSet);
+
+console.log(new Set('Raghav'));
+
+console.log(ordersSet.size);
+console.log(ordersSet.has('Pizza'));
+console.log(ordersSet.has('Bread'));
+
+ordersSet.add('Garlic Bread');
+ordersSet.add('Garlic Bread');
+console.log(ordersSet);
+
+ordersSet.delete('Risotto');
+// ordersSet.clear();
+console.log(ordersSet);
+
+for (const order of ordersSet) console.log(order);
+
+//EXAMPLE
+
+const staff = ['waiter', 'Chef', 'chef', 'waiter', 'chef'];
+const staffUnique = new Set(staff);
+const staffUniqueApproach = [...new Set(staff)];
+console.log(staffUniqueApproach);
+
+console.log(new Set(['waiter', 'Chef', 'chef', 'waiter', 'chef']).size);
+console.log(new Set('shekhawat').size);
