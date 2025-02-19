@@ -446,5 +446,5 @@ const staffUnique = new Set(staff);
 const staffUniqueApproach = [...new Set(staff)];
 console.log(staffUniqueApproach);
 
-// console.log(new Set(['waiter', 'Chef', 'chef', 'waiter', 'chef']).size);
-// console.log(new Set('shekhawat').size);
+console.log(new Set(['waiter', 'Chef', 'chef', 'waiter', 'chef']).size);
+console.log(new Set('shekhawat').size);
